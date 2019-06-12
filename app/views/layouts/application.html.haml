@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+%html(lang="en")
+  %head
+    %meta(charset="UTF-8")/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+    %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
+    %title ComicsShop
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+    %link{crossorigin: "anonymous", href: "https://use.fontawesome.com/releases/v5.9.0/css/all.css", integrity: "sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E", rel: "stylesheet"}/
+  %body
+    %script{crossorigin: "anonymous", integrity: "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", src: "https://code.jquery.com/jquery-3.4.1.min.js"}
+    %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js", integrity: "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o", crossorigin: "anonymous"}
+    %script{src: "https://kit.fontawesome.com/b98b9db41e.js"}
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %nav{class: "navbar sticky-top navbar-light navbar-expand-lg"}
+      .container.justify-content-start
+        %a{href: home_path, id: "logo"}
+          = image_tag 'logo.png', alt: 'ComicsShop', height: '48px', width: '51px'
+        %ul{class: "navbar-nav ml-0"}
+          %li.nav-item
+            = link_to "Главная", home_path, class: "nav-link"
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{ href: "#", role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "true"}
+              Каталог
+            #dropdown-nav.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              - unless @sections.nil?
+                - @sections.each do |f|
+                  = link_to f.name, "#", class: "dropdown-item"      
+          %li.nav-item
+            = link_to 'Статьи', "#", class: "nav-link"
+          %li.nav-item
+            = link_to 'О компании', "#", class: "nav-link"
+        %form.form-inline.my-2.my-lg-0
+          %input#search.form-control.mr-sm-2{ type: "search"}
+          %button.btn.btn-outline-success.my-2.my-sm-0{type: "submit"} Search
+        
+    .container
+      = yield 

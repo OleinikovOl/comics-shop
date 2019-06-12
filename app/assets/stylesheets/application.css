@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ .nav-item {
+   margin-right: 29px;
+ }
+
+ #logo {
+   margin-right: 37px;
+ }
+
+ .navbar {
+   border-bottom: 1px solid #F78B08;
+ }
+
+ #dropdown-nav {
+   border: 1px solid #F78B08;
+   border-radius: 10px;
+ }
+
+ #search::before {
+   content: "\f002";
+   font-family: FontAwesome;
+   font-size: 16px;
+   color: black;
+ }
