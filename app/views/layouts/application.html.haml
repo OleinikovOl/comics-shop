@@ -7,11 +7,10 @@
     %title ComicsShop
     = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
-    %link{crossorigin: "anonymous", href: "https://use.fontawesome.com/releases/v5.9.0/css/all.css", integrity: "sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Open+Sans&display=swap", rel: "stylesheet"}
   %body
     %script{crossorigin: "anonymous", integrity: "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", src: "https://code.jquery.com/jquery-3.4.1.min.js"}
     %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js", integrity: "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o", crossorigin: "anonymous"}
-    %script{src: "https://kit.fontawesome.com/b98b9db41e.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
     %nav{class: "navbar sticky-top navbar-light navbar-expand-lg"}
@@ -32,9 +31,9 @@
             = link_to 'Статьи', "#", class: "nav-link"
           %li.nav-item
             = link_to 'О компании', "#", class: "nav-link"
-        %form.form-inline.my-2.my-lg-0
-          %input#search.form-control.mr-sm-2{ type: "search"}
-          %button.btn.btn-outline-success.my-2.my-sm-0{type: "submit"} Search
-        
+        %form#search.form-inline
+          %input.form-control{ type: "search" }
+          %input{ hidden: "true", type: "submit" }
+
     .container
       = yield 
