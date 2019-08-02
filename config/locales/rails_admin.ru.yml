@@ -1,0 +1,29 @@
+ru:
+  activerecord:
+    models:
+      product:
+        one: Товар
+        other: Товары
+      section:
+        one: Раздел
+        other: Разделы
+    attributes:
+      product:
+        name: Имя
+        editor: Издатель
+        year_publish: Год публикации
+        scenario: Сценарист
+        illustrator: Художники
+        description: Описание
+        wholesale_price: Оптовая цена
+        retail_price: Розничная цена
+        amount: Количество
+        sections: Разделы
+        created_at: Создан
+        updated_at: Изменён
+      section:
+        name: Имя
+        products: Товары
+        created_at: Создан
+        updated_at: Изменён
+

@@ -12,4 +12,87 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 300px;
+}
+
+.nav-item {
+  margin-right: 29px;
+}
+
+#logo {
+  margin-right: 37px;
+}
+
+.navbar {
+  border-bottom: 1px solid #F78B08;
+}
+
+#dropdown-nav {
+  border: 1px solid #F78B08;
+  border-radius: 10px;
+  position: absolute;
+  margin-top: auto;
+}
+
+#dropdown-cart {
+  border: 1px solid #F78B08;
+  border-radius: 10px;
+  position: absolute;
+  margin-top: auto;
+  margin-left: auto;
+  width: 286px;
+  float: left;
+}
+
+#cart_dropdown::after {
+  display: none;
+}
+
+.cart__items {
+  display: block;
+}
+
+.cart__items .item {
+  display: inline-block;
+}
+
+#search {
+  position: relative;
+  margin-left: 15px;
+}
+
+#search:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 14px;
+  color: #878FA1;
+  position: absolute;
+  margin-left: 11px;
+}
+
+#search input {
+  border: 1px solid #F78B08;
+  border-radius: 10px;
+  padding-left: 27px;
+  width: 264px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav__phone {
+  color: #0A647C;
+  margin-left: auto;
+}
+
+.nav__icon {
+  margin-left: 26px;
+}
