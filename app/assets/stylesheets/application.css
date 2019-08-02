@@ -41,6 +41,28 @@ body {
   margin-top: auto;
 }
 
+#dropdown-cart {
+  border: 1px solid #F78B08;
+  border-radius: 10px;
+  position: absolute;
+  margin-top: auto;
+  margin-left: auto;
+  width: 286px;
+  float: left;
+}
+
+#cart_dropdown::after {
+  display: none;
+}
+
+.cart__items {
+  display: block;
+}
+
+.cart__items .item {
+  display: inline-block;
+}
+
 #search {
   position: relative;
   margin-left: 15px;
@@ -50,7 +72,7 @@ body {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 14px;
-  color: #878FA1; 
+  color: #878FA1;
   position: absolute;
   margin-left: 11px;
 }
